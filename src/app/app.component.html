@@ -1,0 +1,14 @@
+<div class="cont">
+  <h1>Covid19 tracker</h1>
+  <label>Country</label>
+  <select class="form-select form-select-sm" aria-label=".form-select-sm example" (change)="getCountry($event.target.value)" >
+    <option *ngFor="let country of countries" value="{{country.Country}}">
+      {{country.Country}}
+    </option>
+  </select>
+  <br>
+  <button type="button" class="btn btn-primary" (click)="getCoronaData()">Get data</button>
+  <h1>Comfirmed cases: {{confirmed}}</h1>
+  <h1>Recovered cases: {{recovered}}</h1>
+  <h1>Death cases: {{deaths}}</h1>
+</div>
